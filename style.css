@@ -1,0 +1,99 @@
+body {
+    margin: 0
+}
+
+.table-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+
+/* Bar Graph Horizontal */
+
+.bar-graph .year {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    opacity: 1;
+}
+
+.bar-graph-horizontal {
+    max-width: 380px;
+    width: 79%;
+}
+
+.bar-graph-horizontal>div {
+    float: left;
+    margin-bottom: 8px;
+    width: 90%;
+}
+
+.bar-graph-horizontal .year {
+    float: right;
+    margin-top: -8px;
+    /* width: 50px; */
+    right: 0;
+    position: absolute;
+    top: 9px;
+}
+
+.bar-graph-horizontal .bar {
+    border-radius: 3px;
+    height: 30px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+    top: 8px;
+}
+
+.bar-graph-one .bar::after {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    color: #fff;
+    content: attr(data-percentage);
+    font-weight: 700;
+    position: absolute;
+    right: -37px;
+    top: -6px;
+}
+
+.bar-graph-one .bar-one .bar {
+    background-color: #229aa7;
+    /* -webkit-animation: show-bar-one 1.2s 0.1s forwards;
+    -moz-animation: show-bar-one 1.2s 0.1s forwards;
+    animation: show-bar-one 1.2s 0.1s forwards; */
+    color: red;
+    overflow: visible;
+}
+
+
+/* Bar Graph Horizontal Animations */
+
+@keyframes show-bar-one {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 69.6%;
+    }
+}
+
+@-webkit-keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.my-class1 .bar {
+    background-color: #fff;
+}
