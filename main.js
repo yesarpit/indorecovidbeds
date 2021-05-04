@@ -70,7 +70,7 @@ let doc;
 let list = [];
 
 axios
-  .get("https://sarthak.nhmmp.gov.in/covid/facility-bed-occupancy-details?show=2000&pagenum=1&district_id=17&facility_org_type=0&facility_type=0", {
+  .post("https://sarthak.nhmmp.gov.in/covid/facility-bed-occupancy-details?show=2000&pagenum=1&district_id=17&facility_org_type=0&facility_type=0", {
     // .get("data.txt", {
     district_id: 17,
     facility_org_type: 0,
